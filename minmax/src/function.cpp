@@ -12,8 +12,29 @@
 
 std::pair<int,int> min_max( int V[], size_t n )
 {
-    // TODO: Adicione aqui sua solução.
+    int num1, num2, maior, menor;
+    std::pair<int,int>  valor; 
 
-    // TODO: Isso é apenas um STUB. Substitua com seu retorno correto.
-    return { -1, -1 };
+    maior=V[0];
+    menor=V[0];
+  
+  for (int i=1; i< n; i++){
+    
+        if (menor>V[i]){
+             menor = V[i];
+             num1=i;
+         }
+
+        if (maior<=V[i]){
+             maior = V[i];
+             num2=i;
+         }
+        
+  
+  }
+  // faltou tratar o caso n == 0 retornando {-1,-1}
+  
+     valor =  std::make_pair (num1, num2);
+
+    return  valor  ;   
 }
